@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Places in Jaipur</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="beach-theme.css">
+    <script src="reviews.js" defer></script>
+    <script src="gps-recommendations.js" defer></script>
+    <style>
+        .submit-btn {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .submit-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .recommendation-section {
+            text-align: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            width: 80%;
+        }
+        .recommendation-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .recommendation-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+        .itinerary-section {
+            padding: 40px;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 40px auto;
+            width: 80%;
+        }
+        .itinerary-list {
+            list-style: none;
+            padding: 0;
+        }
+        .itinerary-item {
+            background: plum;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .add-itinerary-btn {
+            padding: 10px 20px;
+            background: plum;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .add-itinerary-btn:hover {
+            background: plum;
+        }
+        .dark-mode {
+            background: #222;
+            color: white;
+        }
+        .dark-mode .place-card {
+            background: #333;
+            color: white;
+        }
+        .journey-section {
+            padding: 40px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            width: 80%;
+        }
+        .journey-upload input[type="file"] {
+            margin: 10px;
+        }
+
+        .language-support {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .language-dropdown {
+            background: #fff;
+            color: black;
+            border: none;
+            padding: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Explore</a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#places" class="active">Top Places</a></li>
+        </ul>
+    </header>
+
+    <section id="places" class="places-section">
+        <h2>Top 10 Must-Visit Places in Jaipur</h2>
+        <div class="places-container">
+            <div class="place-card">
+                <img src="albert-hall.png" alt="Albert Hall">
+                <h3 style="color: black;">Albert Hall</h3>
+                <p style="color: black;">A stunning museum showcasing Jaipur's rich history and art.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-albert-hall"></div>
+                    <div class="ratings" id="ratings-albert-hall">⭐⭐⭐⭐☆</div>
+                    <textarea id="review-input-albert-hall" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('albert-hall')">Submit</button>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="hawa-mahal.png" alt="Hawa Mahal">
+                <h3 style="color: black;">Hawa Mahal</h3>
+                <p style="color: black;">The iconic palace with a unique honeycomb design, offering stunning city views.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-hawa-mahal"></div>
+                    <div class="ratings" id="ratings-hawa-mahal">⭐⭐⭐⭐⭐</div>
+                    <textarea id="review-input-hawa-mahal" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('hawa-mahal')">Submit</button>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="amber-fort.png" alt="Amber Fort">
+                <h3 style="color: black;">Amber Fort</h3>
+                <p style="color: black;">A majestic fort with intricate architecture and breathtaking views.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-amber-fort"></div>
+                    <div class="ratings" id="ratings-amber-fort">⭐⭐⭐⭐☆</div>
+                    <textarea id="review-input-amber-fort" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('amber-fort')">Submit</button>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="birla-mandir.png" alt="Birla Mandir">
+                <h3 style="color: black;">Birla Mandir</h3>
+                <p style="color: black;">A beautiful marble temple dedicated to Lord Vishnu and Goddess Lakshmi.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-birla-mandir"></div>
+                    <div class="ratings" id="ratings-birla-mandir">⭐⭐⭐⭐⭐</div>
+                    <textarea id="review-input-birla-mandir" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('birla-mandir')">Submit</button>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="city-palace.png" alt="City Palace">
+                <h3 style="color: black;">City Palace</h3>
+                <p style="color: black;">A grand palace complex showcasing Rajput and Mughal architecture.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-city-palace"></div>
+                    <div class="ratings" id="ratings-city-palace">⭐⭐⭐⭐⭐</div>
+                    <textarea id="review-input-city-palace" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('city-palace')">Submit</button>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="galtaji.png" alt="Galtaji">
+                <h3 style="color: black;">Galtaji</h3>
+                <p style="color: black;">An ancient pilgrimage site with natural springs and temples.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-galtaji"></div>
+                    <div class="ratings" id="ratings-galtaji">⭐⭐⭐⭐☆</div>
+                    <textarea id="review-input-galtaji" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('galtaji')">Submit</button>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <img src="jaigarh-fort.png" alt="Jaigarh Fort">
+                <h3 style="color: black;">Jaigarh Fort</h3>
+                <p style="color: black;">A historic fort known for its massive cannon and stunning views.</p>
+                <div class="details">
+                    <div class="reviews" id="reviews-jaigarh-fort"></div>
+                    <div class="ratings" id="ratings-jaigarh-fort">⭐⭐⭐⭐⭐</div>
+                    <textarea id="review-input-jaigarh-fort" placeholder="Write a review..."></textarea>
+                    <button class="submit-btn" onclick="submitReview('jaigarh-fort')">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="my-journey" class="journey-section">
+        <h2 style="color: black;">My Journey</h2>
+        <p style="color: black;">Share your travel experiences by uploading photos or videos!</p>
+        <div class="journey-upload">
+            <!-- Custom styled file input -->
+            <label for="photo-upload" class="file-label">
+                <span class="file-button">Choose Photo</span>
+                <input type="file" id="photo-upload" accept="image/*" class="file-input">
+            </label>
+            <label for="video-upload" class="file-label">
+                <span class="file-button">Choose Video</span>
+                <input type="file" id="video-upload" accept="video/*" class="file-input">
+            </label>
+        </div>
+        <button class="submit-btn">Submit</button>
+    </section>
+    <style>
+        /* Custom styles for file input */
+        .journey-upload {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    
+        .file-label {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .file-label:hover {
+            background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+            transform: scale(1.05);
+        }
+    
+        .file-button {
+            font-size: 16px;
+        }
+    
+        /* Hide the default file input */
+        .file-input {
+            display: none;
+        }
+    
+        .submit-btn {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+    
+        .submit-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+    <section id="recommendations" class="recommendation-section">
+        <h2 style="color: black;">Recommended Places Based on Your Location</h2>
+        <div class="recommendation-list" id="recommendation-list">
+            <p>Loading recommendations...</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const recommendations = [
+                "Nahargarh Fort - Stunning sunset views",
+                "Chokhi Dhani - A taste of Rajasthani culture",
+                "Sisodia Rani Garden - A beautiful historic garden",
+                "Raj Mandir Cinema - Experience royal movie watching",
+                "Panna Meena Ka Kund - An architectural stepwell"
+            ];
+            const recommendationList = document.getElementById("recommendation-list");
+            recommendationList.innerHTML = "";
+            recommendations.forEach(place => {
+                const div = document.createElement("div");
+                div.classList.add("recommendation-item");
+                div.textContent = place;
+                recommendationList.appendChild(div);
+            });
+        });
+    </script>
+
+<section id="itinerary" class="itinerary-section">
+    <h2 style="color: black;">Interactive Itinerary Planner</h2>
+    <input type="text" id="place-input" placeholder="Enter place name...">
+    <button class="add-itinerary-btn" onclick="addToItinerary()">Add to Itinerary</button>
+
+    <div class="language-dropdown">
+        <label for="language-select">Select Language:</label>
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <!-- Add more languages as needed -->
+        </select>
+    </div>
+    <style>
+        /* Styles for the Itinerary Section */
+        .itinerary-section {
+            padding: 40px;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 40px auto;
+            width: 80%;
+            position: relative; /* Make sure to use relative positioning for the dropdown */
+        }
+    
+        .itinerary-list {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .itinerary-item {
+            background: plum;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .add-itinerary-btn {
+            padding: 10px 20px;
+            background: plum;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    
+        .add-itinerary-btn:hover {
+            background: plum;
+        }
+    
+        /* Language Dropdown Style */
+        .language-dropdown {
+            position: absolute; /* Positioning the dropdown in the top-right corner */
+            right: 20px;
+            top: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Light background to make it readable */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .language-dropdown label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    
+        .language-dropdown select {
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+    
+    <script>
+        // JavaScript to handle language change (for multi-language support)
+        document.getElementById('language-select').addEventListener('change', function() {
+            const selectedLanguage = this.value;
+            // Implement your language change logic here, for example:
+            alert('Language changed to ' + selectedLanguage);
+        });
+    </script>
+    <ul id="itinerary-list" class="itinerary-list"></ul>
+</section>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    function addToItinerary() {
+        const placeInput = document.getElementById('place-input');
+        const itineraryList = document.getElementById('itinerary-list');
+        if (placeInput.value.trim() !== "") {
+            const li = document.createElement('li');
+            li.classList.add('itinerary-item');
+            li.innerHTML = `${placeInput.value} <button onclick="this.parentElement.remove()">Remove</button>`;
+            itineraryList.appendChild(li);
+            placeInput.value = "";
+        }
+    }
+</script>
+
+</body>
+</html>

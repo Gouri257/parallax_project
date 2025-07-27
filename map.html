@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map & Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="beach-theme.css"> <!-- New CSS for extra animations -->
+    <script src="weather.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Explore</a>
+        <ul class="navlist">
+            <li><a href="#jaipur-map" class="active">Jaipur Map</a></li>
+            <li><a href="#weather">Weather</a></li>
+        </ul>
+    </header>
+
+    <section id="jaipur-map" class="map-section">
+        <h2>Jaipur's Map with Highlighted Locations</h2>
+        <div class="image-map-container">
+            <img src="map.png" alt="Illustrated Map of Jaipur">
+        </div>
+    </section>
+
+    <section id="weather" class="weather-section">
+        <h2>Jaipur's Weather</h2>
+        <div class="weather-info">
+            <span class="weather-icon">☀️</span>
+            <p>Loading weather...</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=97adb17ff6fe22a935f3302bf6596fb4&units=metric")
+        .then(response => response.json())
+        .then(data => {
+            let icon;
+            if (data.weather[0].main === "Clear") {
+                icon = "☀️";
+            } else if (data.weather[0].main === "Clouds") {
+                icon = "☁️";
+            } else if (data.weather[0].main === "Rain") {
+                icon = "🌧️";
+            } else {
+                icon = "🌡️";
+            }
+
+            document.querySelector(".weather-info").innerHTML = `
+                <span class="weather-icon">${icon}</span>
+                <p>Temperature: ${data.main.temp}°C</p>
+                <p>Weather: ${data.weather[0].description}</p>
+                <p>Humidity: ${data.main.humidity}%</p>
+            `;
+        })
+        .catch(() => document.querySelector(".weather-info").innerHTML = "Weather data unavailable.");
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Pars coder || ParalLax Website</title>
+        <link rel="stylesheet" href="style3.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+
+        <header>
+            <a href="#" class="logo">Jaipur</a>
+            <ul class="navlist">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Popular</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section class="parallax-home">
+                <img src="Home-Images/sky.png" alt="" id="">
+                <img src="Home-Images/moon.png" alt="" id="moon">
+                <img src="Home-Images/water.png" alt="" id="">
+                <img src="Home-Images/center-city.png" alt="" id="">
+                <img src="Home-Images/right-city.png" alt="" id="">
+                <img src="Home-Images/left-city.png" alt="" id="">
+                <img src="Home-Images/train.png" alt="" id="train">
+                <img src="Home-Images/rail.png" alt="" id="">
+                <h1 id="text">Welcome to The Pink City</h1>
+                <img src="Home-Images/hill-left-1.png" alt="" id="">
+                <img src="Home-Images/hill-right-1.png" alt="" id="">
+        </section>
+
+        <section class ="about" id="about">
+            <div class="info-box">
+                <h2> About Jaipur</h2>
+                <p  id="about-text">
+                    Jaipur, the capital of Rajasthan, is famously known as the "Pink City" for its stunning terracotta-colored buildings. 
+            Rich in history and culture, Jaipur is home to magnificent palaces, historic forts, vibrant markets, and delicious Rajasthani cuisine.
+            <span id="more-text" style="display: none;">
+                From the grand Amer Fort to the iconic Hawa Mahal, the city offers a blend of royal heritage and modern charm. 
+                Visitors can explore the vibrant bazaars, taste authentic Rajasthani dishes like Dal Baati Churma, and witness traditional folk performances.
+            </span>
+                </p>
+                <button id="read-more-btn" class="btn" onclick="toggleReadMore()">Read More!</button>
+            </div>
+
+            <img src="About-Images/waterfall.png" alt="" id="waterfall" class="about-waterfall">
+            <img src="About-Images/desert-sky.png" alt="">
+            <img src="About-Images/desert-moon.png" alt="" id="desert-moon">
+            <img src="About-Images/desert-NoSky.png" alt="">
+            <img src="About-Images/desert-rock.png" alt="">
+            <img src="About-Images/water.png" alt="">
+            <img src="About-Images/man.png" alt="" id="man">
+            <img src="About-Images/grass.png" alt="">
+
+            <div id="progress">
+                <span id="progress-value">
+                    <i class='bx bx-chevrons-up'></i>
+                </span>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <h2> Explore Jaipur </h2>
+            <div class="product-card">
+                <div class="card">
+                    <img src ="products/map.png" alt="Map with Highlighted Locations">
+                    <div class="info">
+                        <div class="price-name">
+                            <h3> Map with Highlighted Locations </h3>
+                        </div>
+                        <p> Explore Jaipur’s famous attractions with an interactive map marking the must-visit spots.</p>
+                        <div class="option">
+                            <button class="btn view-map-btn">View Map</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class ="card">
+                    <img src="products/popular-places.png" alt="Popular Places">
+                    <div class="info">
+                        <div class="price-name">
+                            <h3> Popular Places</h3>
+                        </div>
+                        <p>Discover the Top 10 most iconic places in Jaipur, from Amer Fort to Hawa Mahal.</p>
+                        <div class="button-container">
+                            <a href="places.html" class="btn">See Places</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class ="card">
+                    <img src="products/popular-food.png" alt="Popular Food">
+                    <div class="info">
+                        <div class="price-name">
+                            <h3> Popular Foods</h3>
+                        </div>
+                        <p>Experience Jaipur’s vibrant culture through festivals like the Jaipur Literature Fest and Teej.</p>
+                        <div class="button-container">
+                            <a href="food.html" class="btn">See Foods</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class ="card">
+                    <img src="products/popular-events.png" alt="Popular Events">
+                    <div class="info">
+                        <div class="price-name">
+                            <h3> Popular Events</h3>
+                        </div>
+                        <p>Experience Jaipur’s vibrant culture through festivals like the Jaipur Literature Fest and Teej.</p>
+                        <a href="#" class="btn">See Events</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>

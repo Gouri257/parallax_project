@@ -5,7 +5,7 @@ Each scroll section highlights a landmark or cultural element with depth and mot
 The smooth transitions simulate the feeling of exploring Jaipur’s streets, palaces, and traditions.
 
 # Preview
-[> [🎯 View Project Here](https://drive.google.com/file/d/18Gidmo8-w6mC6CEk--_dClJe12fbwi3D/view?usp=sharing)
+[> [🎯 View Project Here](https://drive.google.com/file/d/1sxu9QOeirazjvI_ri4_Wj2zeQ2to-0sv/view?usp=sharing)
 ---]
 
 # Highlights

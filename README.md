@@ -8,6 +8,14 @@ The smooth transitions simulate the feeling of exploring Jaipur’s streets, pal
 [> [🎯 View Project Here](https://drive.google.com/file/d/1sxu9QOeirazjvI_ri4_Wj2zeQ2to-0sv/view?usp=sharing)
 ---]
 
+# Tech Stack
+| Category | Technology |
+|-----------|-------------|
+| **Frontend** | HTML, CSS, JavaScript |
+| **Animations** | CSS Transform & Translate3D, Scroll-based parallax effects |
+| **Version Control** | Git & GitHub |
+| **IDE** | VS Code
+
 # Highlights
 Created a fully responsive parallax layout using pure HTML, CSS, and JavaScript
 Designed custom scroll animations for multi-layered backgrounds

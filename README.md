@@ -17,16 +17,16 @@ The smooth transitions simulate the feeling of exploring Jaipur’s streets, pal
 | **IDE** | VS Code
 
 # Highlights
-Created a fully responsive parallax layout using pure HTML, CSS, and JavaScript
-Designed custom scroll animations for multi-layered backgrounds
-Optimized scroll events for high performance (60 FPS)
-Developed an engaging UI/UX to showcase tourism through storytelling
+- Created a fully responsive parallax layout using pure HTML, CSS, and JavaScript
+- Designed custom scroll animations for multi-layered backgrounds
+- Optimized scroll events for high performance (60 FPS)
+- Developed an engaging UI/UX to showcase tourism through storytelling
 
 # Learning Outcomes
-Gained experience in parallax web design principles
-Improved understanding of DOM manipulation and animation timing
+- Gained experience in parallax web design principles
+- Improved understanding of DOM manipulation and animation timing
 
 # Author
 Gouri Sirimalla
-Email: sirimallagouri@gmail.com
-GitHub: https://github.com/Gouri257
+- Email: sirimallagouri@gmail.com
+- GitHub: https://github.com/Gouri257
